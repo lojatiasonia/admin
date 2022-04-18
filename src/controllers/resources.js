@@ -739,11 +739,11 @@ export default function () {
           case 'orders':
             // url += '&fields=_id,buyers.display_name,buyers.main_email,created_at'
             // essa linha de cima, busca apenas o primeiro nome do cliente, o email e a data de criação do pedido
-            // url += '&created_at>=2022-03-01T03:00:00.000Z&created_at<=2022-04-01T02:59:59.000Z&fields=number,buyers._id,buyers.main_email,items.name,items.quantity,amount,status,financial_status.current,payment_method_label,extra_discount.discount_coupon,utm,created_at'
+            url += '&created_at>=2022-03-01T03:00:00.000Z&created_at<=2022-04-01T02:59:59.000Z&fields=buyers.doc_number,buyers.main_email,items.name,items.quantity,items.sku,amount,created_at'
             // essa de cima, estou filtrando por exemplo pra listar todos os pedidos que estão dentro de created_at do mês de março para buscar todos os pedidos desse período, mas somente informações específicas
             // para propriedades específicas, você pode olhar https://developers.e-com.plus/docs/api/#/store/orders/
-            url += '&fields=_id,created_at,checkout_link,utm,source_name,number,code,status' +
-              ',financial_status,fulfillment_status,amount,payment_method_label,shipping_method_label'
+            // url += '&fields=_id,created_at,checkout_link,utm,source_name,number,code,status' +
+            //  ',financial_status,fulfillment_status,amount,payment_method_label,shipping_method_label'
             break
           case 'carts':
             url += '&fields=_id,available,completed,permalink,status,utm,customers,subtotal,discount'
