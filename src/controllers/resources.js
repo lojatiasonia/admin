@@ -742,7 +742,7 @@ export default function () {
             url += '&created_at>=2022-01-01T03:00:00.000Z&created_at<=2022-05-01T02:59:59.000Z&fields=buyers.doc_number,buyers.main_email,items.name,items.quantity,items.sku,amount,created_at'
             // essa de cima, estou filtrando por exemplo pra listar todos os pedidos que estão dentro de created_at do mês de março para buscar todos os pedidos desse período, mas somente informações específicas
             // para propriedades específicas, você pode olhar https://developers.e-com.plus/docs/api/#/store/orders/
-            // url += '&fields=_id,created_at,checkout_link,utm,source_name,number,code,status' +
+            url += '&fields=_id,created_at,checkout_link,utm,source_name,number,code,status' +
             //  ',financial_status,fulfillment_status,amount,payment_method_label,shipping_method_label'
             break
           case 'carts':
